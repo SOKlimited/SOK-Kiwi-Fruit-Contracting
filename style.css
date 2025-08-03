@@ -1,137 +1,162 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* General Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header Section */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header and Navigation */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2C6E2F; /* Dark Green */
-    padding: 20px;
+  background-color: #0b3d0b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 header .logo img {
-    width: 150px;
+  height: 50px;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-header nav ul li {
-    margin: 0 15px;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #145a14;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-bg.jpg'); /* Your hero image file */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    filter: brightness(0.6) saturate(1.2); /* Darkens and enhances green tones */
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 80, 0, 0.3); /* Greenish-black tint */
-    z-index: 0;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 1;
-    color: white;
+  background-image: linear-gradient(rgba(0, 60, 0, 0.6), rgba(0, 60, 0, 0.6)),
+    url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-text h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .hero-text p {
-    font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-/* About Section */
-.about {
-    padding: 40px 20px;
-    background-color: #f7f7f7;
-    text-align: center;
+/* Section Layouts */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.about h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0b3d0b;
 }
 
-.about p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #145a14;
 }
 
-/* Services Section */
-.services {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+.about ul,
+.services ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-.services h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.about ul li,
+.services ul li {
+  margin-bottom: 8px;
+  font-size: 1.1em;
 }
 
+/* Service Items */
 .service-item {
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #145a14;
+  border-radius: 4px;
 }
 
-.service-item h3 {
-    font-size: 1.8em;
-    color: #2C6E2F; /* You can change this to another shade of green */
+/* Opening Hours Table */
+.hours {
+  margin-top: 40px;
 }
 
-.service-item p {
-    font-size: 1.1em;
-    color: #555;
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-/* Footer Section */
-footer {
-    background-color: #2C6E2F; /* Dark Green */;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.hours-table th,
+.hours-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+.hours-table th {
+  background-color: #0b3d0b;
+  color: #fff;
+}
+
+.hours-table td {
+  background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
 }
