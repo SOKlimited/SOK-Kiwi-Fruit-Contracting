@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: /* yellow green */
+    background-color: #2C6E2F; /* Dark Green */
     padding: 20px;
 }
 
@@ -39,15 +39,31 @@ header nav ul li a {
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-bg.jpg'); /* Change to your own background image */
+    background-image: url('hero-bg.jpg'); /* Your hero image file */
     background-size: cover;
     background-position: center;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    position: relative;
+    filter: brightness(0.6) saturate(1.2); /* Darkens and enhances green tones */
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 80, 0, 0.3); /* Greenish-black tint */
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
 }
 
 .hero-text h1 {
@@ -74,6 +90,8 @@ header nav ul li a {
 .about p {
     font-size: 1.2em;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Services Section */
@@ -89,12 +107,15 @@ header nav ul li a {
 }
 
 .service-item {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-item h3 {
     font-size: 1.8em;
-    color: #000000; /* Black */
+    color: #2C6E2F; /* You can change this to another shade of green */
 }
 
 .service-item p {
@@ -104,7 +125,7 @@ header nav ul li a {
 
 /* Footer Section */
 footer {
-    background-color: #2C6E2F;
+    background-color: #2C6E2F; /* Dark Green */;
     color: white;
     text-align: center;
     padding: 20px;
@@ -114,4 +135,3 @@ footer a {
     color: white;
     text-decoration: none;
 }
-
