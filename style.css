@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2C6E2F; /* Dark Green */
+    background-color: #000000; /* Black */
     padding: 20px;
 }
 
@@ -94,7 +94,7 @@ header nav ul li a {
 
 .service-item h3 {
     font-size: 1.8em;
-    color: #2C6E2F; /* Dark Green */
+    color: #000000; /* Black */
 }
 
 .service-item p {
