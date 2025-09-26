@@ -24,55 +24,42 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background-image: linear-gradient(rgba(0, 60, 0, 0.6), rgba(0, 60, 0, 0.6)), url('hero-bg.jpg');">
-    <div class="hero-text">
-      <h1>Contact SOK Kiwi Fruit Contracting</h1>
-      <p>We’re here to help with all your kiwifruit contracting needs</p>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section class="contact-page">
-    <h2>Get in Touch</h2>
-    <p>You can reach us via phone or email, or connect with us on social media:</p>
+    <h2>Contact Us</h2>
+    <p>For enquiries, please email or call us:</p>
+    <p><strong>Email:</strong> <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+642102376512">+64 210 237 6512</a></p>
 
-    <div class="contact-info">
-      <p>📞 Phone: <a href="tel:+642102376512">+64 210 237 6512</a></p>
-      <p>📧 Email: <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a></p>
-      <p>
-        🌐 Follow us: 
-        <a href="https://www.facebook.com/profile.php?id=61555636665940&open_field=website&sk=about_contact_and_basic_info" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com/sok_kiwifruit_contracting/" target="_blank">Instagram</a>
-      </p>
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61555636665940&open_field=website&sk=about_contact_and_basic_info" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/sok_kiwifruit_contracting/" target="_blank">Instagram</a>
     </div>
 
     <!-- Contact Form -->
-    <div class="contact-form">
-      <form action="#" method="post">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
-  <!-- Footer / Contact Info -->
-  <footer class="contact-footer">
-    <p>📞 +64 210 237 6512 | 📧 <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a></p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SOK Kiwi Fruit Contracting | Email: <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a> | Phone: <a href="tel:+642102376512">+64 210 237 6512</a></p>
     <p>
-      🌐 Follow us: 
-      <a href="https://www.facebook.com/profile.php?id=61555636665940&open_field=website&sk=about_contact_and_basic_info" target="_blank">Facebook</a> | 
+      <a href="https://www.facebook.com/profile.php?id=61555636665940&open_field=website&sk=about_contact_and_basic_info" target="_blank">Facebook</a> |
       <a href="https://www.instagram.com/sok_kiwifruit_contracting/" target="_blank">Instagram</a>
     </p>
-    <p>© 2025 SOK Kiwi Fruit Contracting. All rights reserved.</p>
   </footer>
 
 </body>
