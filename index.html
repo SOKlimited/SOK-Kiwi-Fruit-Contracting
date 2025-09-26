@@ -4,55 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SOK Kiwi Fruit Contracting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* General Styles */
+    /* General Styling */
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
-      background-color: #f9f9f9;
     }
+
     a {
+      color: #2e7d32;
       text-decoration: none;
-      color: #2a6f2b;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     header {
-      background-color: #ffffff;
+      background: #2e7d32;
+      color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 50px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
+
     header .logo img {
-      max-height: 50px;
+      height: 50px;
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
+      margin: 0;
+      padding: 0;
     }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
     nav ul li a {
-      font-weight: 500;
-      padding: 5px 10px;
-      transition: 0.3s;
-    }
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #2a6f2b;
       color: #fff;
-      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
     }
 
     /* Hero Section */
     .hero {
-      background: url('hero.jpg') no-repeat center center/cover; /* Replace with your old hero image */
+      background: url('hero-bg.jpg') no-repeat center center/cover;
       height: 500px;
       display: flex;
       justify-content: center;
@@ -61,83 +70,64 @@
       text-align: center;
       position: relative;
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4);
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
-    .hero-text {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 20px;
+
+    .hero-text p {
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     /* Sections */
     section {
-      padding: 50px;
-      max-width: 1100px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
     }
+
     h2 {
-      text-align: center;
-      color: #2a6f2b;
+      color: #2e7d32;
       margin-bottom: 20px;
-    }
-    h3 {
-      color: #1f4f1c;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .service-item {
-      background-color: #fff;
-      padding: 20px;
-      margin: 15px 0;
-      border-left: 5px solid #2a6f2b;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    /* Hours Table */
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
+    h3 {
+      color: #1b5e20;
       margin-top: 20px;
     }
-    .hours-table th, .hours-table td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    .hours-table th {
-      background-color: #2a6f2b;
-      color: white;
+
+    ul {
+      list-style: disc inside;
     }
 
-    /* Responsive */
-    @media(max-width: 768px){
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .hero h1 {
-        font-size: 32px;
-      }
-      .hero p {
-        font-size: 16px;
-      }
+    /* Services */
+    .services .service-item {
+      margin-bottom: 30px;
+      padding: 15px;
+      border-left: 5px solid #2e7d32;
+      background: #f1f8f1;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1b5e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -180,6 +170,7 @@
     </p>
 
     <h3>What We Do</h3>
+    <p>We offer a full range of kiwifruit contracting services, including:</p>
     <ul>
       <li>Winter Pruning</li>
       <li>Summer Canopy Work</li>
@@ -206,7 +197,6 @@
     <p>
       At SOK Kiwi Fruit Contracting, we don’t just work in orchards — we partner with growers to help their business thrive. Whether you’re preparing for the next season or looking for a long-term contractor you can trust, we’re here to help.
     </p>
-    <p><strong>📞 Contact us today</strong> to learn how we can support your orchard’s success.</p>
   </section>
 
   <!-- Services Section -->
@@ -228,27 +218,17 @@
       <p>Careful kiwi picking and packing for optimal fruit quality.</p>
     </div>
 
-    <div class="service-item">
-      <h3>Pollination Support</h3>
-      <p>Flower thinning and pollination coordination to boost fruit set.</p>
-    </div>
-
-    <!-- Opening Hours Table -->
-    <div class="hours">
-      <h3>Opening Hours</h3>
-      <table class="hours-table">
-        <tr><th>Day</th><th>Time</th></tr>
-        <tr><td>Monday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Tuesday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Wednesday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Thursday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Friday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Saturday</td><td>08:00 AM – 06:00 PM</td></tr>
-        <tr><td>Sunday</td><td>08:00 AM – 06:00 PM</td></tr>
-      </table>
-    </div>
-
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📧 <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a> | 📞 +64 210 237 6512</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61555636665940" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/sok_kiwifruit_contracting/" target="_blank">Instagram</a>
+    </p>
+    <p>&copy; 2025 SOK Kiwi Fruit Contracting. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
