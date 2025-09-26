@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us – SOK Kiwi Fruit Contracting</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styling for fancy layout */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #0f766e;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+    .contact-page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .contact-page h2 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #0f766e;
+    }
+    .contact-details {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .contact-details li {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+    .contact-details a {
+      color: #0f766e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    .hours {
+      margin-top: 30px;
+    }
+    .hours h3 {
+      color: #0f766e;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .hours-table th, .hours-table td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .hours-table th {
+      background: #f0fdf4;
+    }
+    footer {
+      background: #0f766e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,8 +115,14 @@
 
   <section class="contact-page">
     <h2>Contact Us</h2>
-    <p>For enquiries, please email us:</p>
-    <p><a href="mailto:info@sokkiwifruitcontracting.com">info@sokkiwifruitcontracting.com</a></p>
+    <p>We’d love to hear from you. Reach us through phone, email, or social media:</p>
+
+    <ul class="contact-details">
+      <li><strong>Phone:</strong> <a href="tel:+642102376512">+64 21 023 76512</a></li>
+      <li><strong>Email:</strong> <a href="mailto:nzjobs.sok@gmail.com">nzjobs.sok@gmail.com</a></li>
+      <li><strong>Facebook:</strong> <a href="https://www.facebook.com/people/SOK-KiwiFruit-Contracting/61555636665940/" target="_blank">SOK KiwiFruit Contracting</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sok_kiwifruit_contracting/" target="_blank">@sok_kiwifruit_contracting</a></li>
+    </ul>
 
     <div class="hours">
       <h3>Opening Hours</h3>
@@ -40,6 +138,14 @@
       </table>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> SOK Kiwi Fruit Contracting. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
