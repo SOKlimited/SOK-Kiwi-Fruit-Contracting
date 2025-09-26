@@ -23,9 +23,16 @@ header {
   flex-wrap: wrap;
 }
 
+header .logo {
+  background-color: #ffffff; /* makes logo pop */
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
 header .logo img {
-  height: 200px; /* Bigger logo */
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.7)); /* subtle shadow */
+  height: 120px; /* adjusted size for visibility */
+  width: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
 }
 
 nav ul {
@@ -50,9 +57,9 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  width: 100vw; /* full viewport width */
+  width: 100vw;
   max-width: 100%;
-  height: 500px; /* taller */
+  height: 500px;
   background-image: linear-gradient(rgba(0, 60, 0, 0.6), rgba(0, 60, 0, 0.6)),
     url('hero-bg.jpg');
   background-size: cover;
@@ -116,31 +123,24 @@ h3 {
   border-radius: 4px;
 }
 
-/* Opening Hours Table */
-.hours {
+/* Contact Info Footer */
+.contact-footer {
+  background-color: #0b3d0b;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
   margin-top: 40px;
 }
 
-.hours-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-.hours-table th,
-.hours-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.hours-table th {
-  background-color: #0b3d0b;
+.contact-footer a {
   color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
 }
 
-.hours-table td {
-  background-color: #f9f9f9;
+.contact-footer a:hover {
+  color: #145a14;
 }
 
 /* Contact Form Styling */
